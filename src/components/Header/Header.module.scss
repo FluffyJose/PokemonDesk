@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+li,
+a {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  height: 93px;
+  width: 1440px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f5db13;
+}
+
+.logo {
+  position: absolute;
+  left: 10.9%;
+  right: 78.18%;
+  top: 15.05%;
+  bottom: 17.2%;
+}
+
+.navLinks {
+  display: inline-block;
+  list-style: none;
+  padding: 30px;
+}
