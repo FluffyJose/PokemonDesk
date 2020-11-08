@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import s from './Header.module.scss';
 
@@ -42,9 +43,9 @@ const Header = () => {
         </div>
         <div className={s.menuWrap}>
           {MENU.map((item) => (
-            <a key={item.id} href={item.link} className={s.menuLink}>
+            <Link key={item.id} to={item.link} className={s.menuLink}>
               {item.value}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
