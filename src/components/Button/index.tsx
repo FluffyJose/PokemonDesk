@@ -8,6 +8,7 @@ interface ButtonProps {
   isYellow?: boolean;
   isSmallButton?: boolean;
   isFullWidth?: boolean;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -16,17 +17,13 @@ const Button: FC<ButtonProps> = ({
   isFullWidth = false,
   className,
   children,
+  onClick,
 }) => {
   return (
     <button
       type="button"
-      className={cn(
-        s.root,
-        isSmallButton && s.smallButton,
-        isYellow && s.color,
-        isFullWidth && s.widthFull,
-        className,
-      )}>
+      className={cn(s.root, isSmallButton && s.smallButton, isYellow && s.color, isFullWidth && s.widthFull, className)}
+      onClick={onClick}>
       {children}
     </button>
   );
