@@ -5,10 +5,16 @@
   background: linear-gradient(180deg, $third 0%, $primary 100%);
 }
 
-.content {
-  font-size: 50px;
-  height: 50vh;
+.contentWrap {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.contentText {
+  align-items: center;
+}
+
+.contentParallax {
+  width: 100%;
 }

@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .root {
   height: 22px;
   width: 1125px;
@@ -12,4 +14,5 @@
 }
 .footerText {
   font-size: 18px;
+  color: $dark;
 }
