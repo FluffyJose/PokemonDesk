@@ -1,12 +1,18 @@
-.footer {
-  font-family: 'Karla', sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-  color: black;
+@import '../../variables';
+
+.root {
+  height: 22px;
+  width: 1125px;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   position: absolute;
   left: 8.88%;
   right: 13.05%;
   top: 94.63%;
   bottom: 3.22%;
+}
+.footerText {
+  font-size: 18px;
+  color: $dark;
 }

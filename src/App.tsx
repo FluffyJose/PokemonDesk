@@ -1,14 +1,17 @@
 import React from 'react';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import HomePage from './pages/Home';
+import PokedexPage from './pages/Pokedex';
 
 const App = () => {
   return (
-    <>
-      <Header />
-      <div className="content">Content</div>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/home" component={HomePage} />
+        <Route path="/pokedex" component={PokedexPage} />
+      </Switch>
+    </BrowserRouter>
   );
 };
 

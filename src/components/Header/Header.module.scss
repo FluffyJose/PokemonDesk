@@ -1,38 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import '../../variables';
 
-li,
-a {
-  font-family: 'Karla', sans-serif;
-  font-weight: 400;
-  font-size: 19px;
-  color: black;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.header {
+.root {
   height: 93px;
-  width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1125px;
+  height: 63px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pokemonLogo {
+  width: 158px;
+  height: 63px;
+}
+
+.menuWrap {
   display: flex;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  background-color: #f5db13;
+  max-width: 658px;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.logo {
-  position: absolute;
-  left: 10.9%;
-  right: 78.18%;
-  top: 15.05%;
-  bottom: 17.2%;
-}
+.menuLink {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 29px;
+  color: $dark;
+  text-decoration: none;
+  position: relative;
 
-.navLinks {
-  display: inline-block;
-  list-style: none;
-  padding: 30px;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    height: 1px;
+    width: 1%;
+    background: $dark;
+    border: 1px solid $dark;
+    border-radius: 6px;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: opacity, width ease-in-out 0.25s;
+  }
+  &:hover,
+  &.activeLink {
+    &:after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
 }
