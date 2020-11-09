@@ -22,7 +22,9 @@ const HomePage = () => {
         <div className={s.contentText}>
           <Heading tag="h1">Find all your favorite Pokemon</Heading>
           <p>You can know the type of Pokemon, its strength, disadvantages and abilities</p>
-          <Button onClick={handleClick}>See Pokemons</Button>
+          <Button onClick={handleClick} color="yellow" size="small">
+            See Pokemons
+          </Button>
         </div>
         <div className={s.contentParallax}>
           <Parallax />

@@ -9,7 +9,7 @@ interface HeadingProps {
 }
 
 const Heading: FC<HeadingProps> = ({ tag = 'h1', className, children }) => {
-  return React.createElement(`${tag}`, cn(className, s.root), `${children}`);
+  return React.createElement(tag, { className: cn(className, s.root) }, children);
 };
 
 export default Heading;
