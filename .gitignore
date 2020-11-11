@@ -2,5 +2,3 @@ node_modules/
 
 src/**.d.ts
 src/**/**.d.ts
-
-*.module.d.ts
