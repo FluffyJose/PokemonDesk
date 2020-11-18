@@ -16,11 +16,11 @@ interface IPokemon {
     id: number;
     // "is_default": boolean,
     // "order": number,
-    // "weight": number
+    weight: number;
   };
 }
 
-const PokemonCard: React.FC<IPokemon> = ({ pokemon: { name, stats, types, img } }) => {
+const PokemonCard: React.FC<IPokemon> = ({ pokemon: { name, stats, types, img, weight } }) => {
   return (
     <div className={s.root}>
       <div className={s.infoWrap}>
@@ -39,7 +39,7 @@ const PokemonCard: React.FC<IPokemon> = ({ pokemon: { name, stats, types, img } 
         </div>
         <div className={s.labelWrap}>
           {types.map((type) => (
-            <span key={type} className={s.label}>
+            <span key={weight} className={s.label}>
               {type}
             </span>
           ))}

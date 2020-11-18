@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { A, usePath } from 'hookrouter';
 import cn from 'classnames';
 import { GENERAL_MENU } from '../../routes';
@@ -28,4 +28,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);
