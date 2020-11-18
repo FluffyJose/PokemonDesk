@@ -30,11 +30,11 @@ const PokedexPage = () => {
 
   return (
     <div className={s.root}>
-      <Heading tag="h1">
+      <Heading tag="h1" className={s.text}>
         {!isLoading && data?.total} <b>Pokemons</b> for you to choose your favorite
       </Heading>
-      <div>
-        <input type="text" value={searchValue} onChange={handleSearchChange} />
+      <div className={s.search}>
+        <input type="text" value={searchValue} onChange={handleSearchChange} className={s.inputField} />
       </div>
       <div className={s.wrap}>
         {!isLoading && data?.pokemons.map((pokemon) => <PokemonCard pokemon={pokemon} key={pokemon.id} />)}

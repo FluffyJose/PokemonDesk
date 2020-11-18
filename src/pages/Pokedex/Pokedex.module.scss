@@ -9,3 +9,41 @@
   align-content: flex-start;
   flex-wrap: wrap;
 }
+
+.text {
+  left: 10.29%;
+  right: 10.2%;
+  top: 0%;
+  bottom: 72.48%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 41px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  width: 1088px;
+  height: 53px;
+  padding-bottom: 36px;
+  margin: auto;
+}
+
+.inputField {
+  background: #f2f2f2;
+  box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
+  border-radius: 40px;
+  border: none;
+  width: 1000px;
+  height: 40px;
+  outline: none;
+  padding-left: 40px;
+}
