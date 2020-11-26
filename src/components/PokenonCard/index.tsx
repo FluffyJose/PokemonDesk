@@ -1,4 +1,5 @@
 import React from 'react';
+import toCapitalizeFirstLetter from '../../utils/capitalizeFirstLetter';
 import Heading from '../Heading';
 
 import s from './PokemonCard.module.scss';
@@ -19,7 +20,7 @@ const PokemonCard: React.FC<IPokemon> = ({ pokemon: { name, stats, types, img, i
     <div className={s.root}>
       <div className={s.infoWrap}>
         <Heading tag="h2" className={s.titleName}>
-          {name}
+          {toCapitalizeFirstLetter(name)}
         </Heading>
         <div className={s.statWrap}>
           <div className={s.statItem}>
@@ -34,7 +35,7 @@ const PokemonCard: React.FC<IPokemon> = ({ pokemon: { name, stats, types, img, i
         <div className={s.labelWrap}>
           {types.map((type) => (
             <span key={id} className={s.label}>
-              {type}
+              {toCapitalizeFirstLetter(type)}
             </span>
           ))}
         </div>
