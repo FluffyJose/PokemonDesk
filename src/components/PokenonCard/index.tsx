@@ -1,31 +1,26 @@
 import React from 'react';
+import toCapitalizeFirstLetter from '../../utils/capitalizeFirstLetter';
 import Heading from '../Heading';
 
 import s from './PokemonCard.module.scss';
 
 interface IPokemon {
   pokemon: {
-    // "name_clean": string,
-    // "abilities": string[],
     stats: { [n: string]: number };
     types: string[];
     img: string;
     name: string;
-    // "base_experience": number,
-    // "height": number,
     id: number;
-    // "is_default": boolean,
-    // "order": number,
     weight: number;
   };
 }
 
-const PokemonCard: React.FC<IPokemon> = ({ pokemon: { name, stats, types, img, weight } }) => {
+const PokemonCard: React.FC<IPokemon> = ({ pokemon: { name, stats, types, img, id } }) => {
   return (
     <div className={s.root}>
       <div className={s.infoWrap}>
         <Heading tag="h2" className={s.titleName}>
-          {name}
+          {toCapitalizeFirstLetter(name)}
         </Heading>
         <div className={s.statWrap}>
           <div className={s.statItem}>
@@ -39,8 +34,8 @@ const PokemonCard: React.FC<IPokemon> = ({ pokemon: { name, stats, types, img, w
         </div>
         <div className={s.labelWrap}>
           {types.map((type) => (
-            <span key={weight} className={s.label}>
-              {type}
+            <span key={id} className={s.label}>
+              {toCapitalizeFirstLetter(type)}
             </span>
           ))}
         </div>
